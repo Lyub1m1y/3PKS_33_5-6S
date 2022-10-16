@@ -28,11 +28,10 @@ int main() {
     cin >> element[i].name;
     cin >> element[i].mass;
     cin >> element[i].num;
-    FILE* out = fopen("text5.txt", "a+");
-    fprintf(out, "%s\t%s\t%lf\t%d\n", element[i].formula, element[i].name,
-            element[i].mass, element[i].num);
-    fclose(out);
+    ofstream out("text5.txt", ios::app);
+    out << element[i].formula << '\t' << element[i].name << '\t'
+        << element[i].mass << '\t' << element[i].num << endl;
+    out.close();
   }
-
   return 0;
 }
