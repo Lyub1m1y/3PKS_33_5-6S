@@ -1,4 +1,4 @@
-Li	Litiy	6.939	3
+Li	Litiy	6.939	2
 G	GI	2	0
 G	GI	2.27	228
-Raketa	Timura	2.28	1337
+Raketa	Timura	2.28	29

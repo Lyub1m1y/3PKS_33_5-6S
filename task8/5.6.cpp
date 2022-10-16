@@ -25,10 +25,13 @@ int checkRow(string numConsol, string temp) {
   int counterTrue = 0;
   int flag = 0;
   for (int i = 0; i < tempLength; i++) {
-    if (temp[i] == ' ') {
+    if (temp[i] == '\t') {
       for (int j = 0; j < numConsolLength; j++) {
         if (numConsol[j] == temp[i + 1]) {
           counterTrue++;
+          cout << counterTrue << endl;
+        } else {
+          counterTrue = 0;
         }
       }
     }
@@ -48,14 +51,17 @@ int main() {
   cin >> numConsol;
   fstream in("text5.txt");
   string str, temp;
-  while (getline(in, temp)) {
+  int flagWhile = 0;
+  while (getline(in, temp) && (flagWhile == 0)) {
     str = temp;
+    if (checkRow(numConsol, temp) == 1) {
+      cout << temp << endl;
+      flagWhile = 1;
+    } else {
+      cout << "Nothing found" << endl;
+    }
   }
-  if (checkRow(numConsol, temp) == 1) {
-    cout << temp << endl;
-  } else {
-    cout << "Nothing found";
-  }
+
   in.close();
   return 0;
 }
