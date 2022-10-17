@@ -26,14 +26,17 @@ int checkRow(string numConsol, string temp) {
   int flag = 0;
   for (int i = 0; i < tempLength; i++) {
     if (temp[i] == '\t') {
-      for (int j = 0; j < numConsolLength; j++) {
-        if (numConsol[j] == temp[i + 1]) {
+      for (int j = 0, i2 = i; j < numConsolLength; j++, i2++) {
+        if (numConsol[j] == temp[i2 + 1]) {
           counterTrue++;
           cout << counterTrue << endl;
         } else {
           counterTrue = 0;
         }
       }
+      cout << "----------------" << endl;
+      cout << "вышел из цикла" << endl;
+      cout << "----------------" << endl;
     }
   }
   if (counterTrue == numConsolLength) {
