@@ -29,22 +29,15 @@ int checkRow(string numConsol, string temp) {
       for (int j = 0, i2 = i; j < numConsolLength; j++, i2++) {
         if (numConsol[j] == temp[i2 + 1]) {
           counterTrue++;
-          cout << counterTrue << endl;
         } else {
           counterTrue = 0;
         }
       }
-      cout << "----------------" << endl;
-      cout << "вышел из цикла" << endl;
-      cout << "----------------" << endl;
     }
   }
   if (counterTrue == numConsolLength) {
     flag = 1;
   }
-  cout << "tempLength = " << tempLength << endl;
-  cout << "numConsolLength = " << numConsolLength << endl;
-  cout << "Flag = " << flag << endl;
   return flag;
 }
 
@@ -54,17 +47,20 @@ int main() {
   cin >> numConsol;
   fstream in("text5.txt");
   string str, temp;
-  int flagWhile = 0;
+  int flagWhile = 0, flagCout = 0;
   while (getline(in, temp) && (flagWhile == 0)) {
     str = temp;
     if (checkRow(numConsol, temp) == 1) {
       cout << temp << endl;
+      flagCout = 0;
       flagWhile = 1;
     } else {
-      cout << "Nothing found" << endl;
+      flagCout = 1;
     }
   }
-
+  if (flagCout == 1) {
+    cout << "Nothing found" << endl;
+  }
   in.close();
   return 0;
 }
