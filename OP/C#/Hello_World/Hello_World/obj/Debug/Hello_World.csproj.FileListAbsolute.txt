@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\3PKS_33_5S\OP\C#\Hello_World\Hello_World\bin\Debug\Hello_World.exe.config
+C:\Users\user\Desktop\3PKS_33_5S\OP\C#\Hello_World\Hello_World\bin\Debug\Hello_World.exe
+C:\Users\user\Desktop\3PKS_33_5S\OP\C#\Hello_World\Hello_World\bin\Debug\Hello_World.pdb
+C:\Users\user\Desktop\3PKS_33_5S\OP\C#\Hello_World\Hello_World\obj\Debug\Hello_World.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\3PKS_33_5S\OP\C#\Hello_World\Hello_World\obj\Debug\Hello_World.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\3PKS_33_5S\OP\C#\Hello_World\Hello_World\obj\Debug\Hello_World.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\3PKS_33_5S\OP\C#\Hello_World\Hello_World\obj\Debug\Hello_World.exe
+C:\Users\user\Desktop\3PKS_33_5S\OP\C#\Hello_World\Hello_World\obj\Debug\Hello_World.pdb
