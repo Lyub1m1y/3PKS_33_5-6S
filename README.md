@@ -1,5 +1,19 @@
 # katrinap_projects -> 3PKS_33_5S
 
+Сорокина Н.Д. ks-nsorokina@mail.ru
+
+‌Шомас eshomas@yandex.ru
+
+‌Регин. Ген. Можно кидать ей в вк реферат 8-10 стр на любую тему
+
+‌Милана Евг. collegepguti@yandex.ru
+
+‌Семëнов В. А. semvlad21@gmail.com
+
+‌Горобей В.В. gorobeyvale@gmail.com
+
+‌Абрамова С.Г. dir.svetlana@gmail.com
+
 BJD - БЖД
 English - Англ. Яз.
 Num_Meth - Численные методы
