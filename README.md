@@ -1,6 +1,6 @@
 # katrinap_projects -> 3PKS_33_5S
 
-Сорокина Н.Д. ks-nsorokina@mail.ru
+Сорокина Н.Д. ks-nsorocina@mail.ru
 
 ‌Шомас eshomas@yandex.ru
 
