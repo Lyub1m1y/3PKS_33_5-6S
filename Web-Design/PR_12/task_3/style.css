@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	width: 100%;
+	height: 750px;
+	background-color: gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	position: absolute;
+	width: 200px;
+	height: 500px;
+	background-color: black;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.redbox {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	animation: redlight 15s infinite;
+	background-color: #300;
+}
+
+.yellowbox {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	animation: yellowlight 15s infinite;
+	background-color: #430;
+}
+
+.greenbox {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	animation: greenlight 15s infinite;
+	background-color: #030;
+}
+
+@keyframes redlight {
+	0% {
+		background: #300;
+	}
+
+	55% {
+		background: #300;
+	}
+
+	65% {
+		background: #f00;
+	}
+
+	95% {
+		background: #f00;
+	}
+
+	100% {
+		background: #300;
+	}
+}
+
+@keyframes yellowlight {
+	0% {
+		background: #430;
+	}
+
+	45% {
+		background: #430;
+	}
+
+	55% {
+		background: #fc0;
+	}
+
+	80% {
+		background: #430;
+	}
+
+	100% {
+		background: #430;
+	}
+}
+
+@keyframes greenlight {
+	0% {
+		background: #030;
+	}
+
+	45% {
+		background: #0a0;
+	}
+
+	55% {
+		background: #0a0;
+	}
+
+	80% {
+		background: #030;
+	}
+
+	100% {
+		background: #030;
+	}
+}
+
+.redbox,
+.yellowbox,
+.greenbox {
+	animation-duration: 5s;
+}
