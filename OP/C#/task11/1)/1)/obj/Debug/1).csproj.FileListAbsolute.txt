@@ -1,8 +1,0 @@
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\task11\1)\1)\bin\Debug\1).exe.config
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\task11\1)\1)\bin\Debug\1).exe
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\task11\1)\1)\bin\Debug\1).pdb
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\task11\1)\1)\obj\Debug\1).csproj.AssemblyReference.cache
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\task11\1)\1)\obj\Debug\1).csproj.SuggestedBindingRedirects.cache
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\task11\1)\1)\obj\Debug\1).csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\task11\1)\1)\obj\Debug\1).exe
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\task11\1)\1)\obj\Debug\1).pdb

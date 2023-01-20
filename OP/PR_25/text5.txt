@@ -1,4 +1,0 @@
-Li	Litiy	6.939	3
-GI	G	2	200
-Pendosius	Pe	3.5463	228
-No	Nobeliy	255	102

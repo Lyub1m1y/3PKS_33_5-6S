@@ -1,4 +1,0 @@
-Jeleska	3	500
-Truba	10	700
-Bibus	20	228
-Detal	100	1000

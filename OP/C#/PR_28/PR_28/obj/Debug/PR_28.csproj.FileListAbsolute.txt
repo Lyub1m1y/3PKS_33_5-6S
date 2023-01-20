@@ -1,8 +1,0 @@
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\PR_28\PR_28\bin\Debug\PR_28.exe.config
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\PR_28\PR_28\bin\Debug\PR_28.exe
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\PR_28\PR_28\bin\Debug\PR_28.pdb
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\PR_28\PR_28\obj\Debug\PR_28.csproj.AssemblyReference.cache
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\PR_28\PR_28\obj\Debug\PR_28.csproj.SuggestedBindingRedirects.cache
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\PR_28\PR_28\obj\Debug\PR_28.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\PR_28\PR_28\obj\Debug\PR_28.exe
-C:\Users\user\Desktop\3PKS_33_5S\OP\C#\PR_28\PR_28\obj\Debug\PR_28.pdb
