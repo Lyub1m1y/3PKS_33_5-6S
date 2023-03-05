@@ -1,0 +1,118 @@
+.clock {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.hour-hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  width: 4px;
+  height: 40px;
+  background-color: black;
+}
+.minute-hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  width: 3px;
+  height: 70px;
+  background-color: black;
+}
+.second-hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  width: 2px;
+  height: 90px;
+  background-color: red;
+}
+.center-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+#circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+}
+
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  border-radius: 10px;
+  border-spacing: 1;
+  text-align: center;
+  margin: auto;
+  border: 2px solid gray;
+  }
+  th {
+  background: #BCEBDD;
+  color: white;
+  text-shadow: 0 2px 1px #2D2020;
+  padding: 10px 20px;
+  }
+  th, td {
+  border-style: solid;
+  border-width: 0 2px 1px 0;
+  border-color: gray;
+  }
+  th:first-child, td:first-child {
+  text-align: left;
+  }
+  th:first-child {
+  border-top-left-radius: 10px;
+  }
+  th:last-child {
+  border-top-right-radius: 10px;
+  border-right: none;
+  }
+  td {
+  padding: 10px 20px;
+  background: #F8E391;
+  color: black;
+  }
+  tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+  }
+  tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+  }
+  tr td:last-child {
+  border-right: none;
+  }
+
+
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: purple;
+  transition: all 150ms ease;
+  animation: move 2s ease-in-out infinite alternate;
+}
+@keyframes move {
+  from {
+      transform: translateX(20px);
+    }
+    to {
+      transform: translateX(calc(600px));
+    }
+}

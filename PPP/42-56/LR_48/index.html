@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Анимация ЛР_48</title>
+</head>
+
+<body>
+  <div id="ball"></div>
+  <script>
+    let ball = document.getElementById("ball");
+    let x = 100;
+    let lastX;
+    let lastY;
+    setInterval(function () {
+      ball.style.left = x + "%";
+      if (x === 50) {
+        ball.style.display = "none";
+        for (let i = 0; i < 5; i++) {
+          let smallBall = document.createElement("div");
+          smallBall.className = "small-ball";
+          smallBall.style.top = lastY + "%";
+          smallBall.style.left = lastX + "%";
+          document.body.appendChild(smallBall);
+        }
+      }
+      x -= 1;
+    }, 50);
+
+    let smallBalls = document.getElementsByClassName("small-ball");
+    setInterval(function () {
+      for (let i = 0; i < smallBalls.length; i++) {
+        let speedX = (Math.random() - 0.5) * 220;
+        let speedY = (Math.random() - 0.5) * 220;
+
+        function move() {
+          let x = smallBalls[i].offsetLeft + speedX;
+          let y = smallBalls[i].offsetTop + speedY;
+
+
+          if (x >= window.innerWidth || x <= 0) {
+            speedX = -speedX;
+          }
+          if (y >= window.innerHeight || y <= 0) {
+            speedY = -speedY;
+          }
+          smallBalls[i].style.left = x + "px";
+          smallBalls[i].style.top = y + "px";
+        }
+        setInterval(move, 50);
+
+      }
+
+    }, 50);
+  </script>
+
+</body>
+
+</html>

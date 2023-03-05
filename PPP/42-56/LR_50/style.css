@@ -1,0 +1,59 @@
+.aquarium {
+    width: 800px;
+    height: 500px;
+    background-color: lightblue;
+    border: 1px solid black;
+    position: relative;
+  }
+
+  .fish {
+    width: 300px;
+    height: 220px;
+    position: absolute;
+    background-image: url(fish.png);
+    background-size: cover;
+  }
+
+  .airplane {
+    width: 300px;
+    height: 176px;
+    position: absolute;
+    background-image: url(airplane.png);
+    background-size: cover;
+  }
+
+.moveObject {
+    animation: move 4s linear infinite;
+  }
+  
+  @keyframes move {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(450px, 250px);
+    }
+  }
+  
+  .movePlane {
+    animation: fly 4s linear infinite;
+  }
+  
+  @keyframes fly {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(200px, 100px);
+    }
+    50% {
+      transform: translate(200px, 200px);
+    }
+    75% {
+      transform: translate(0, 100px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  

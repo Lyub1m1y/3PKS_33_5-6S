@@ -1,0 +1,40 @@
+#animation {
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+  
+  #object {
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: move 5s linear infinite;
+  }
+  
+  @keyframes move {
+    from {
+      left: 0;
+      top: 0;
+    }
+    to {
+      left: 250px;
+      top: 250px;
+    }
+  }
+  
+  button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: purple;
+  }
+  
+  button:active {
+    background-color: red;
+  }
+  
