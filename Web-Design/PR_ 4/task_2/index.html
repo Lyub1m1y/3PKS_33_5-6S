@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Good Day</title>
+</head>
+
+<body>
+	<h1>Good Day</h1>
+	<p>Сколько раз пожелать вам доброго дня? (макс 25)</p>
+	<input type="text" id="numGoodDays">
+	<button onclick="sayGoodDay()">Пожелай Доброго дня</button>
+
+	<script>
+		function sayGoodDay() {
+			const input = document.getElementById("numGoodDays").value;
+
+			if (isNaN(input) || input < 1 || input > 25) {
+				alert("Пожалуйста введите число от 1 до 25.");
+			} else {
+				let message = "";
+				for (let i = 0; i < input; i++) {
+					message += "Good day!<br>";
+				}
+				document.getElementById("output").innerHTML = message;
+			}
+		}
+	</script>
+
+	<div id="output"></div>
+</body>
+
+</html>

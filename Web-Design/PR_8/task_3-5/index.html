@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="buttonStyle()">Click</button>
+
+    <script>
+        const buttonStyle = () => {
+            let myP = document.createElement('p')
+            myP.style.fontSize = '24px'
+            myP.style.color = '#3c763d'
+            myP.style.backgroundColor = '#dff0d8'
+            myP.style.padding = '15px'
+            myP.style.border = '1px solid #d6e9c6'
+            myP.style.borderRadius = '4px'
+            myP.innerHTML = '<b>Всем привет!</b> Вы прочитали сообщение'
+            document.body.appendChild(myP)
+
+            setTimeout(() => {
+                document.body.removeChild(myP)
+            }, 3000)
+        }
+    </script>
+</body>
+
+</html>

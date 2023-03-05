@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ПР 11</title>
+</head>
+
+<body>
+    <div class="main-block">
+        <div class="counter">
+            <h2 id="secondsCounter"></h2>
+        </div>
+
+        <p>Время:</p>
+        <div id="clock"></div>
+        <p></p>
+        <div>
+            Таймер: <span id="timer">10</span> сек.
+        </div>
+        <p></p>
+        <a>Картинки:</a>
+        <div id="slider">
+            <img src="1.jpg" id="slide">
+        </div>
+        <p></p>
+        <button onclick="openWindow('apple')" class="btn first">Apple</button>
+        <button onclick="openWindow('banana')" class="btn first">Banana</button>
+        <button onclick="openWindow('cherry')" class="btn first">Cherry</button>
+        <p></p>
+        <table id="countdown">
+            <tr>
+                <td>Часы</td>
+                <td>Минуты</td>
+                <td>Секунды</td>
+            </tr>
+            <tr>
+                <td id="hours"></td>
+                <td id="minutes"></td>
+                <td id="seconds"></td>
+            </tr>
+        </table>
+
+        <script>
+            let count = 0;
+            const secondsCounter = document.querySelector("#secondsCounter");
+
+            setInterval(() => {
+                if (count === 5) {
+                    clearInterval();
+                } else {
+                    secondsCounter.textContent = `Прошло: ${++count} сек.`;
+                }
+            }, 1000);
+
+
+            function updateClock() {
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+                document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+            }
+            setInterval(updateClock, 1000);
+
+
+            function Timer() {
+                let timerSeconds = 10;
+                let runningTimer = setInterval(function () {
+                    timerSeconds--;
+                    document.getElementById("timer").innerHTML = timerSeconds;
+                    setInterval(runningTimer, 1000);
+                    if (timerSeconds === 0) {
+                        clearInterval(runningTimer);
+                        document.getElementById("timer").innerHTML = "Прошло 10";
+                    }
+
+                }, 1000)
+            }
+            Timer();
+
+
+            const slider = document.querySelector("#slider");
+            const slide = document.querySelector("#slide");
+            let images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+            index = 0;
+
+            function updateSlider() {
+                slide.src = images[index];
+                index = (index + 1) % images.length;
+            }
+            setInterval(updateSlider, 1000);
+
+            // =========================================================
+
+            function openWindow(fruit) {
+                window.open("imageFruit/" + fruit + ".jpg", "width=400, height=400");
+            }
+
+            // ==============================================================
+
+            const countdown = document.querySelector("#countdown");
+            const hoursSpan = document.querySelector("#hours");
+            const minutesSpan = document.querySelector("#minutes");
+            const secondsSpan = document.querySelector("#seconds");
+
+            setInterval(() => {
+                // создание нового объекта Date, который представляет текущую дату и время.
+                const now = new Date();
+                // создание нового объекта Date, который представляет полночь следующего дня. 
+                // Он использует методы getFullYear, getMonth и getDate для получения текущего года, месяца и даты и добавляет 1 к дате, чтобы получить следующий день. 
+                // Другие значения (0, 0, 0) представляют час, минуту и ​​секунду полуночи.
+                const then = new Date(
+                    now.getFullYear(),
+                    now.getMonth(),
+                    now.getDate() + 1,
+                    0,
+                    0,
+                    0
+                );
+                // вычисление времени, оставшееся до полуночи следующего дня, в секундах. 
+                // time вычитает текущую дату из тогдашней даты и делит результат на 1000, чтобы преобразовать миллисекунды в секунды.
+                const time = (then - now) / 1000;
+
+                // вычисление количество полных часов, оставшихся до полуночи следующего дня. 
+                // hours делит время на 3600 (количество секунд в 1 часе). Функция Math.floor округляет до ближайшего целого числа в меньшую сторону.
+                const hours = Math.floor(time / 3600);
+
+                // вычисление количества полных минут, оставшихся после подсчета часов. Он делит оставшееся время (time / 3600) на 60 (количество секунд в 1 минуте). 
+                // Функция Math.floor округляет до ближайшего целого числа в меньшую сторону.
+                const minutes = Math.floor(time % 3600 / 60);
+
+                // вычисление количества полных секунд, оставшихся после подсчета часов и минут. 
+                // Требуется остаток time, разделенный на 60 (количество секунд в 1 минуте). 
+                // Функция Math.floor округляет до ближайшего целого числа в меньшую сторону.
+                const seconds = Math.floor(time % 60);
+
+                // Следующие три строки обновляют текстовое содержимое ячеек часов, минут и секунд вычисленными значениями. 
+                // Функция String преобразует значения в строки, а метод padStart добавляет начальный ноль, если число меньше 10.
+                hoursSpan.textContent = String(hours).padStart(2, "0");
+                minutesSpan.textContent = String(minutes).padStart(2, "0");
+                secondsSpan.textContent = String(seconds).padStart(2, "0");
+            }, 1000);
+        </script>
+
+    </div>
+</body>
+
+</html>

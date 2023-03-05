@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-block">
+        <p>Два массива.</p>
+        <script>
+            //1.1
+            let mass1 = ['Банан', 'Яблоко', 'Груша', 'Апельсин', 'Манго', 'Свекла', 'Капуста', 'Морковь', 'Огурец', 'Томат']
+            let mass2 = ['Тигр', 'Волк', 'Лев', 'Медведь', 'Рысь', 'Синица', 'Филин', 'Ворона', 'Воробей', 'Сорока']
+            let mass1_string = mass1.join(", ");
+            let mass2_string = mass2.join(", ");
+            document.write(`Первый массив: ${mass1_string}<br>`);
+            document.write(`Второй массив: ${mass2_string}<br>`);
+            document.write(`<br>`);
+
+            //1.2
+            let fruits = mass1.concat();
+            fruits.splice(5, 5)
+            let fruits_string = fruits.join(", ");
+            document.write(`Массив fruits: ${fruits_string}<br>`);
+            let bird = mass2.concat();
+            bird.splice(0, 5);
+            let bird_string = bird.join(", ");
+            document.write(`Массив bird: ${bird_string}<p>`);
+
+            //1.3
+            let mass3 = mass1.concat(mass2, fruits, bird);
+            let mass3_string = mass3.join(", ");
+            document.write(`Объединённый массив: ${mass3_string}<p>`);
+
+            //1.4
+            document.write(`Длина mass1 = ${mass1.length}<br>Длина fruits = ${fruits.length}<p>`);
+
+            //1.5 и 1.6
+            let new_mass1 = mass1.concat();
+            new_mass1.push("Соловей");
+            new_mass1.unshift("Мандарин");
+            let new_mass1_string = new_mass1.join(", ");
+            document.write(`Массив с добавленными элементами: ${new_mass1_string}<br>Его длина = ${new_mass1.length}<br>`);
+
+            //1.7
+            new_mass1.reverse();
+            new_mass1_string1 = new_mass1.join(", ");
+            document.write(`Массив с инвертированным порядком: ${new_mass1_string1}<br>`)
+
+            //1.8
+            new_mass1.sort();
+            new_mass1_string2 = new_mass1.join(", ");
+            document.write(`Отсортированный массив: ${new_mass1_string2}<p>`)
+
+            //1.9
+            for (var i = 0; i < fruits.length; i++) {
+                fruits[i] = fruits[i] + " съел";
+            }
+            new_fruits_string = fruits.join(", ");
+            document.write(`Изменённый массив fruits: ${new_fruits_string}<br>`)
+
+            //1.10
+            bird.splice(2, 2, "Галка", "Голубь");
+            bird_string = bird.join(", ");
+            document.write(`Массив bird с заменёнными элементами: ${bird_string}`);
+        </script>
+    </div>
+</body>
+
+</html>

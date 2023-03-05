@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-block">
+        <form>
+            <label>Длина:</label>
+            <input type="number" id="length">
+            <label>Ширина:</label>
+            <input type="number" id="width">
+            <button type="button" onclick="calculate()" class="btn first">Рассчитать</button>
+            <p><b>Площадь: </b><span id="square"></span></p>
+            <p><b>Периметр: </b><span id="perimeter"></span></p>
+          </form>
+          <script type="text/javascript">
+          function calculate(){
+              let length = document.getElementById("length").value;
+              let width = document.getElementById("width").value;
+          
+              let square = length * width;
+          
+              document.getElementById("square").innerHTML = square;
+          
+              let perimeter = 2 * (length + width);
+          
+              document.getElementById("perimeter").innerHTML = perimeter;    
+          }  										  
+          </script>
+
+        <!-- Этот код создает текстовое поле (textarea) и список дисциплин на странице. -->
+        <textarea id="textarea"></textarea>
+
+        <ul>
+        <li class="discipline">Математика 
+            <span class="teacher">Иванов И. И.</span>
+        </ul>
+        <li class="discipline">Физика 
+            <span class="teacher">Петров П. П.</span>
+        </ul>
+        <li class="discipline">История 
+            <span class="teacher">Сидоров С. С.</span>
+        </ul>
+        </ul>
+
+        <script>
+        const disciplines = document.querySelectorAll(".discipline");
+        const textarea = document.querySelector("#textarea");
+
+        for (let i = 0; i < disciplines.length; i++) {
+        disciplines[i].addEventListener("mouseover", function() {
+            const teacher = this.querySelector(".teacher").innerHTML;
+            textarea.value = teacher;
+        });
+        disciplines[i].addEventListener("mouseout", function() {
+            textarea.value = "";
+        });
+        }
+        </script>
+
+        <input type="text" id="input">
+        <button id="block" class="btn2">Block</button>
+        <button id="unblock" class="btn2">Unblock</button>
+
+        <script>
+            let input = document.querySelector('#input');
+            let blockButton = document.querySelector('#block');
+            let unblockButton = document.querySelector('#unblock');
+            
+
+            blockButton.addEventListener('click', function() {
+                input.setAttribute('disabled', true);
+            });
+            
+            unblockButton.addEventListener('click', function() {
+                input.removeAttribute('disabled');
+            });
+        </script>
+
+        <p></p>
+        <label class="checkbox">
+            <input type="checkbox" id="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        <button id="button" class="btn3">Нажми меня</button>
+        <p id="result"></p>
+
+        <script>
+        const checkbox = document.getElementById("checkbox");
+        const button = document.getElementById("button");
+        const result = document.getElementById("result");
+
+        button.addEventListener("click", function() {
+            if (checkbox.checked) {
+            result.textContent = "Привет";
+            } else {
+            result.textContent = "Пока";
+            }
+        });
+        </script>
+
+
+    </div>
+</body>
+</html>

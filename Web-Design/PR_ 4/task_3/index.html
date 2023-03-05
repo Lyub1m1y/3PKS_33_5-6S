@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Looping Images</title>
+</head>
+
+<body>
+	<h1>Looping Images</h1>
+
+	<script>
+		const images = [
+			"https://via.placeholder.com/150/FF0000/FFFFFF?text=Flower",
+			"https://via.placeholder.com/150/00FF00/FFFFFF?text=Car",
+			"https://via.placeholder.com/150/0000FF/FFFFFF?text=Toy",
+			"https://via.placeholder.com/150/FFFF00/000000?text=Cup",
+			"https://via.placeholder.com/150/FF00FF/FFFFFF?text=Flower",
+			"https://via.placeholder.com/150/00FFFF/000000?text=Car",
+			"https://via.placeholder.com/150/800000/FFFFFF?text=Toy",
+			"https://via.placeholder.com/150/008000/FFFFFF?text=Cup",
+			"https://via.placeholder.com/150/000080/FFFFFF?text=Flower"
+		];
+
+		for (let i = 0; i < images.length; i++) {
+			const img = document.createElement("img");
+			img.src = images[i];
+			document.body.appendChild(img);
+		}
+	</script>
+</body>
+
+</html>

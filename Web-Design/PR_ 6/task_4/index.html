@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		const worker = {
+			name: "Kirill",
+			surname: "Mefodievich",
+			age: 32,
+			salary: 1999999,
+			saySalary: function () {
+				alert(`Зарплата сотрудника: ${worker.salary}`);
+			}
+		};
+
+		document.write(worker.name + "<br>");
+		document.write(worker.surname + "<br>");
+		document.write(worker.age + "<br>");
+		document.write(worker.salary);
+
+		worker.name = 'Dreyk';
+
+		delete worker.age;
+
+		console.log(worker);
+
+		worker.saySalary();
+	</script>
+</body>
+
+</html>

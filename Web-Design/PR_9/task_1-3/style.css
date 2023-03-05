@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper, .secondLesson, .thirdLesson {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#click-button {
+    width: 550px;
+    height: 300px;
+    margin: 0 auto;
+    font-size: 55px;
+    color: white;
+    font-weight: 700;
+    border: 5px solid grey;
+    border-radius: 35px;
+    transition: 0.2s;
+    background-color: black;
+}
+
+#click-button:hover, #secondButton:hover, #thirdButton:hover {
+    background: orchid;
+}
+
+#secondButton, #thirdButton {
+    width: 100px;
+    height: 55px;
+    font-size: 13px;
+    margin-left: 10px;
+    color: white;
+    font-weight: 700;
+    border: 2px solid grey;
+    border-radius: 15px;
+    transition: 0.2s;
+    background-color: black;
+}
+

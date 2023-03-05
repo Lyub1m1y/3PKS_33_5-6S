@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="center-block">
+		Задание 1
+		<br>
+		<script>
+			var today = new Date();
+			var day = today.getDate();
+			var month = today.getMonth();
+
+			var monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+			var monthName = monthNames[month];
+			var year = today.getFullYear();
+
+			var days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+			var dayName = days[today.getDay()];
+
+			var hours = today.getHours();
+			var minutes = today.getMinutes();
+			var seconds = today.getSeconds();
+
+			document.write("В Самаре " + day + " " + monthName + " " + year + ", " + dayName + "<br>");
+			document.write("Время " + hours + ":" + minutes + ":" + seconds);
+
+		</script>
+
+		<br>
+		<br>
+		Задание 2
+		<br>
+
+		<script>
+			var originalString = "aaa@bbb@ccc";
+
+			var newString = originalString.replace(/@/g, "!");
+
+			document.write(`Оригинальная строка: ${originalString}<br>`);
+			document.write(`Изменённая строка: ${newString}`);
+		</script>
+
+		<br>
+		<br>
+		Задание 3
+		<br>
+
+		<script>
+			var originalDate = "2020-02-18";
+
+			var dateArr = originalDate.split("-");
+
+			var newDate = dateArr.join(":");
+			document.write(`Оригинальная дата: ${originalDate}<br>`);
+			document.write(`Изменённая дата: ${newDate}`);
+		</script>
+		<br>
+		<br>
+		Задание 4,5,6,7,8,9
+		<br>
+		<script>
+			var originalString = "Я изучаю JavaScript!";
+			var upperString = originalString.toUpperCase();
+			var lowerString = originalString.toLowerCase();
+			var stringLength = originalString.length;
+			document.write(`Оригинал: ${originalString}<br>Строка в верхнем регистре: ${upperString}
+            <br>Строка в нижнем регистре: ${lowerString}<br>Количество символов в оригинальной строке: ${stringLength}<br>`);
+			var extractString = originalString.substr(2, 7);
+			document.write(`Извлечённое слово: ${extractString}<br>`);
+
+			var encodedString = [1052, 1086, 1089, 1082, 1074, 1072];
+			var decodedString = "";
+			for (var i = 0; i < encodedString.length; i++) {
+				decodedString += String.fromCharCode(encodedString[i]);
+			};
+			document.write(`Закодированное слово: ${decodedString}<br>`);
+
+			document.write("Код ASCII: ");
+			for (var i = 0; i < decodedString.length; i++) {
+				document.write(`(${decodedString.charCodeAt(i)})`);
+			}
+
+			document.write(`<br>Закодированное слово "Самара" - `);
+			var stringCity = "Самара";
+			var encode = "";
+			for (let i = 0; i < stringCity.length; i++) {
+				document.write(`(${stringCity.charCodeAt(i)})`);
+			}
+		</script>
+	</div>
+
+</body>
+
+</html>

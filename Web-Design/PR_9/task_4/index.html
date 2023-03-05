@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="thirdLesson">
+        <img width="550px" height="500px" id="image" src="off.png" alt="off">
+        <button id="thirdButton" onclick="switchLight()">Turn on light</button>
+    </div>
+
+    <script>
+        let imageLightIndex = 0
+        let imagesLight = ['on.png', 'off.png']
+        
+        const switchLight = () => {
+            imageLightIndex = (imageLightIndex + 1) % imagesLight.length
+            document.getElementById('image').src = imagesLight[imageLightIndex]
+        }
+    </script>
+</html>
